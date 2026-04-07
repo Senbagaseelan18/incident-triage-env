@@ -1,0 +1,29 @@
+name: incident-triage-env
+description: AI-Powered Incident Triage & Escalation System
+author: OpenEnv Hackathon
+version: 1.0.0
+openenv_version: ">=1.0.0"
+
+tasks:
+  - id: task_easy
+    name: Severity Classification
+    description: Classify incident severity (easy task)
+    difficulty: easy
+  
+  - id: task_medium
+    name: Severity & Routing
+    description: Classify severity and route to team (medium task)
+    difficulty: medium
+  
+  - id: task_hard
+    name: Full Pipeline
+    description: Complete severity, team, priority, and escalation (hard task)
+    difficulty: hard
+
+server:
+  port: 7860
+  host: "0.0.0.0"
+
+docker:
+  image: incident-triage-env:latest
+  port: 7860
