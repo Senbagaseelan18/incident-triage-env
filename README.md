@@ -34,6 +34,28 @@ This environment simulates an IT incident management system where an agent must:
 pip install -r requirements.txt
 ```
 
+## 🌐 Web Dashboards
+
+**Easy-to-use interactive interfaces:**
+
+### Streamlit Dashboard (Recommended)
+```bash
+pip install streamlit
+streamlit run app.py
+```
+Opens at: http://localhost:8501
+
+Features:
+- 🎮 Interactive incident triage gameplay
+- 📊 Real-time statistics
+- 📈 Episode history tracking
+- 🎯 Live feedback on decisions
+
+### HTML Dashboard
+Simply open `dashboard.html` in your browser! No dependencies needed.
+
+For full details, see [DASHBOARD.md](DASHBOARD.md)
+
 ## Project Structure
 
 ```
@@ -44,6 +66,8 @@ pip install -r requirements.txt
 ├── models.py              # Environment models
 ├── client.py              # OpenEnv client
 ├── inference.py           # Inference script
+├── app.py                 # Streamlit dashboard
+├── dashboard.html         # HTML dashboard
 ├── openenv.yaml           # Configuration
 ├── Dockerfile             # Docker setup
 └── README.md              # This file
@@ -51,24 +75,22 @@ pip install -r requirements.txt
 
 ## Quick Start
 
-### Run Environment Locally
+### 🌐 Web Dashboards
 
-```bash
-python server/main.py
-```
+**Interactive UI to test the environment:**
 
-### Run Inference
+1. **Streamlit Dashboard** (Recommended)
+   ```bash
+   pip install streamlit
+   streamlit run app.py
+   ```
+   Opens at: http://localhost:8501
 
-```bash
-python inference.py --task task_easy
-```
+2. **HTML Dashboard** (No dependencies)
+   - Simply open `dashboard.html` in your browser
+   - Or serve: `python -m http.server 8000`
 
-### Docker Build
-
-```bash
-docker build -t incident-triage-env:latest .
-docker run -p 7860:7860 incident-triage-env:latest
-```
+### 🔧 API Access
 
 ## Tasks
 
