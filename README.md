@@ -1,3 +1,12 @@
+---
+title: Incident Triage Environment
+emoji: 🚨
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+---
+
 # AI-Powered Incident Triage & Escalation System
 
 A real-world OpenEnv environment where an AI agent learns to classify and route IT incidents efficiently.
